@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavras</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: aliceblue;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+
+    .container {
+        margin: 80px;
+    }
+
+
+    h1 {
+        font-size: 40px;
+    }
+
+    input {
+        background-color: aliceblue;
+        text-decoration: none;
+        border-radius: 10px;
+        width: 450px;
+        height: 50px;
+        color: black;
+        font-size: 25px;
+        padding: 10px;
+        border: 2px solid black;
+    }
+
+    input::placeholder {
+        color: rgb(0, 0, 0);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        margin: 10;
+    }
+
+    #res{
+        font-size: 25px;
+        color: black;
+        border: 2px solid black;
+        margin: 10px;
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="flex">
+
+            <h1>PALAVRAS</h1>
+
+            <input type="text" id="nome" placeholder="digite uma palavra">
+
+            <button onclick="nome()">ver</button>
+
+        </div>
+
+        <div id="res">
+
+        </div>
+    </div>
+
+
+    <script>
+        var nomes = []
+
+        function nome() {
+
+            var nome = document.getElementById("nome").value
+            var res = document.getElementById("res")
+            res.innerHTML = " "
+
+            nomes.push(nome)
+
+            for (i = 0; i < nomes.length; i++) {
+                res.innerHTML += nomes[i] + "<br>" 
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
